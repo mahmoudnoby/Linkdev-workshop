@@ -1,0 +1,67 @@
+<div class="news-list-bg">
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a [routerLink]="['/home']" routerLinkActive="router-link-active">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">News</li>
+      </ol>
+    </nav>
+
+    <h1>News</h1>
+    <div class="row filtering-area">
+      <div class="col-md-2">
+        <label for="from">From</label>
+        <input type="date" name="from" class="form-control" id="" placeholder="From">
+      </div>
+      <div class="col-md-2">
+        <label for="from">To</label>
+        <input type="date" name="from" class="form-control" id="" placeholder="To">
+      </div>
+      <div class="col-md-2">
+        <label for="category">Category</label>
+        <select class="form-control"  (ngModelChange)="onSelecteCategory($event)" >
+          <option [value]="null" disabled selected hidden>Category</option>
+          <option *ngFor="let category of categories" [ngValue]="category.id" >
+            {{ category.name }}
+          </option>
+        </select>
+      </div>
+      <div class="col-md-5">
+          <label for="search ">Search</label>
+          <input type="text" class="form-control " placeholder="Search Service">
+      </div>
+      <div class="col-md-1">
+        <label for="category">Sort</label>
+        <select class="form-control"  (ngModelChange)="onSelecteCategory($event)" >
+          <option [value]="null" disabled selected hidden>Category</option>
+          <option *ngFor="let category of categories" [ngValue]="category.id" >
+            {{ category.name }}
+          </option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div *ngFor="let article of articles" class="col-md-4 col-sm-6 col-xs-12">
+        <div class="card" style="width: 23rem;" [routerLink]="['/news-list/', article.id]"
+          routerLinkActive="router-link-active">
+          <img [src]="article.urlToImage" class="card-img-top img-fluid" alt="...">
+          <div class="card-body">
+            <div class="news-media d-flex justify-content-end">
+              <img src="assets/theme/images/ic_favorite_border_24px.png" alt="" srcset="">
+              <i class="fas fa-heart"></i>
+              <i class="fas fa-share-alt"></i>
+            </div>
+            <h5 class="card-title">{{article.title}}</h5>
+            <div class="news-tags"> News</div>
+            <p class="card-text">{{article.description}}</p>
+            <div class="news-date">
+              <img src="assets/theme/images/calender.png" class="news-calender" alt="" srcset="">
+              <p class="">{{article.publishedAt | date: 'EEEE d MMMM y'}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

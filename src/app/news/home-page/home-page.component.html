@@ -1,0 +1,125 @@
+<!--Home Carousel-->
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="assets/theme/images/banner.png" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="assets/theme/images/Rectangle.png" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item ">
+      <img src="assets/theme/images/parallax-10.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<!--News Section-->
+<div class="container news-wrapper">
+  <div class="row py-4 justify-content-between news-header">
+    <h3>Latest News</h3>
+    <span (click)="viewAllNews()">View All <img src="assets/theme/images/right-arrow.png" alt="" srcset=""></span>
+  </div>
+
+  <div class="row">
+    <div *ngFor="let article of articles" class="col-md-4 col-sm-6 col-xs-12">
+      <div class="card" style="width: 23rem;" [routerLink]="['/news-list/', article.id]" routerLinkActive="router-link-active" >
+        <img [src]="article.urlToImage" class="card-img-top img-fluid" alt="...">
+        <div class="card-body">
+          <div class="news-media d-flex justify-content-end">
+            <img src="assets/theme/images/ic_favorite_border_24px.png" alt="" srcset="">
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-share-alt"></i>
+          </div>
+          <h5 class="card-title">{{article.title}}</h5>
+          <div class="news-tags"> News</div>
+          <p class="card-text">{{article.description}}</p>
+          <div class="news-date">
+            <img src="assets/theme/images/calender.png" class="news-calender" alt="" srcset="">
+            <p class="">{{article.publishedAt | date: 'EEEE d MMMM y'}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Who We Help -->
+
+<div class="target-people p-5">
+  <div class="layer"></div>
+  <div class="header text-center">
+    <h1>How we have helped</h1>
+    <p>See how Al Foundation have promoted change locally and to the world </p>
+  </div>
+  <div class="rectangles-wrapper py-5">
+    <div class="row justify-content-center">
+      <div class="rectangle text-center">
+        <div class="rectangle-items">
+          <img src="assets/theme/images/location.png" class="location" alt="" srcset="">
+          <h6>Find Place</h6>
+          <img src="assets/theme/images/+.png" alt="" class="" srcset="">
+        </div>
+      </div>
+      <div class="rectangle text-center">
+        <div class="rectangle-items">
+          <img src="assets/theme/images/Show-Hide password.png" class="location" alt="" srcset="" style="height: 37px;">
+          <h6>A'awen</h6>
+          <img src="assets/theme/images/+.png" alt="" class="" srcset="">
+        </div>
+      </div>
+      <div class="rectangle text-center">
+        <div class="rectangle-items">
+          <img src="assets/theme/images/omniyat.png" class="location" alt="" srcset="">
+          <h6>Omniyat</h6>
+          <img src="assets/theme/images/+.png" alt="" class="" srcset="">
+        </div>
+      </div>
+      <div class="rectangle text-center">
+        <div class="rectangle-items">
+          <img src="assets/theme/images/surface1.png" class="location" alt="" srcset="">
+          <h6>Give Time</h6>
+          <img src="assets/theme/images/+.png" alt="" class="" srcset="">
+        </div>
+      </div>
+
+    </div>
+    <div class="row justify-content-center last-row">
+      <div class="rectangle text-center">
+        <div class="rectangle-items">
+          <img src="assets/theme/images/tofoula.png" class="location" alt="" srcset="">
+          <h6>Tofoula</h6>
+          <img src="assets/theme/images/+.png" alt="" class="" srcset="">
+        </div>
+      </div>
+      <div class="rectangle text-center">
+        <div class="rectangle-items">
+          <img src="assets/theme/images/fundraising.png" class="location" alt="" srcset="">
+          <h6>Fundraising</h6>
+          <img src="assets/theme/images/+.png" alt="" class="" srcset="">
+        </div>
+      </div>
+      <div class="rectangle text-center">
+        <div class="rectangle-items">
+          <img src="assets/theme/images/zakat.png" class="location" alt="" srcset="">
+          <h6>Zakat</h6>
+          <img src="assets/theme/images/+.png" alt="" class="" srcset="">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,143 @@
+.carousel-inner {
+  .carousel-item {
+    height: 365px;
+    overflow: hidden;
+  }
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+}
+
+.news-wrapper {
+  .news-header {
+    span {
+      padding-top: 1px;
+      font-size: 13px;
+      color: #8dc043;
+      cursor: pointer;
+    }
+    img {
+      height: 8px;
+    }
+  }
+  .card {
+    box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+    margin-bottom: 30px;
+    cursor: pointer;
+    .card-img-top {
+      height: 10.5rem;
+      object-fit: cover;
+    }
+    .card-title {
+      height: 80px;
+      font-size: 19px;
+    }
+    .card-text {
+      height: 65px;
+      padding-top: 5px;
+      color: #787878;
+      margin-bottom: 20px;
+      overflow: hidden;
+      font-size: 14px;
+    }
+    .news-media {
+      padding-bottom: 15px;
+      img {
+        height: 19px;
+      }
+      .fa-share-alt,
+      .fa-heart {
+        padding-left: 9px;
+        color: #8dc043;
+        font-size: 19px;
+      }
+    }
+    .news-tags {
+      display: inline-block;
+      background-color: #e3e3e3;
+      padding: 2px 21px;
+      border-radius: 8px;
+      margin-bottom: 8px;
+    }
+    .news-date {
+      img {
+        height: 17px;
+        padding-right: 9px;
+      }
+      p {
+        font-weight: bold;
+        font-size: 14px;
+        color: #707070;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+
+.target-people {
+  background: url("../../../assets/theme/images/Rectangle.png") no-repeat center
+    center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  color: #fff;
+  position: relative;
+  width: auto;
+  overflow-y: hidden;
+  .layer {
+    background-color: rgb(62 62 62 / 53%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+    z-index: 1;
+  }
+  .header{
+    position: relative;
+    z-index: 3;
+    p{
+      font-size: 25px;
+    }
+  }
+  .rectangle {
+    margin-left: 40px;
+    margin-right: 40px;
+    transform: rotate(45deg);
+    display: inline-block;
+    border: 3px solid #fff;
+    height: 170px;
+    width: 170px;
+    z-index: 3;
+    &:hover{
+      background-color: #8dc043;
+      border: 2px solid #8dc043;
+    }
+    .rectangle-items {
+      transform: rotate(-45deg);
+      padding-left: 23px;
+      .location {
+        height: 45px;
+        margin-bottom: 12px !important;
+        margin-top: 13px;
+      }
+      h6 {
+        font-size: 21px;
+        padding-top: 22px;
+        padding-bottom: 8px;      }
+    }
+  }
+
+  .last-row{
+    margin-top: -20px;
+  }
+}

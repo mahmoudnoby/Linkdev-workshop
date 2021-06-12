@@ -1,0 +1,63 @@
+
+/*--------------------------------------------------------------------------------------------------------
+                                * FOOTER SECTION *
+--------------------------------------------------------------------------------------------------------*/
+.upper-footer{
+    padding: 50px 40px;
+    background-color: #f2f2f2
+}
+
+.upper-footer h5 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #616161;
+    font-size: 15px;
+}
+
+.upper-footer ul li {
+    color: #616161;
+    font-family: "Montserrat",sans-serif;
+    padding: 7px 0;
+    font-size: 11px;
+}
+.upper-footer ul li a{
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    color: #616161;
+    font-size: 11px;
+    text-decoration-line:none;
+    -moz-text-decoration-line:none;
+}
+.upper-footer .fab{
+    padding: 10px 5px;
+}
+.upper-footer .fa-twitter-square {
+    color: #55abef;
+}
+.upper-footer .fa-facebook-square{
+    color: #45629e;
+}
+.upper-footer .fa-instagram-square{
+    color:#db4437 ;
+}
+.upper-footer .fa-linkedin{
+    color: #0076b6;
+}
+.upper-footer .fa-google-plus-square{
+    color:#db4437;
+}
+
+/***** -----------------------------------------------
+                DOWN-FOOTER
+----------------------------------------------------*/
+
+
+.lower-footer{
+    padding-top:  15px ;
+    background-color: #038896;
+    color: #fff;
+    p {
+      font-size: 13px;
+    }
+}

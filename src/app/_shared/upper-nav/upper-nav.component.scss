@@ -1,0 +1,44 @@
+/*--------------------------------------------------------------------------------------------------------
+                                * Upper NAV *
+--------------------------------------------------------------------------------------------------------*/
+.upper-navigator{
+    background-color:  rgba(0, 131, 207, 0.794);
+    padding: 0 65px;
+}
+
+.upper-nav{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.upper-nav .fas{
+    color: #fff;
+}
+.upper-nav li{
+    display: inline-block;
+    font-size: 0.8rem;
+    color: #fff;
+    padding: 7px;
+}
+.ul-2 .upper-nav{
+    display: flex;
+    justify-content: flex-end;
+}
+.ul-2 .upper-nav li{
+    cursor: pointer;
+
+}
+.ul-2 .upper-nav img{
+    max-width: 20px;
+    max-height: 15px;
+    margin-left: 5px;
+}
+@media(max-width: 575.98px),(max-width: 767.98px) {
+    .upper-nav .first-ul{
+        display: none;
+    }
+    .ul-2 .upper-nav{
+        display: flex;
+        justify-content: flex-start;
+    }
+}
