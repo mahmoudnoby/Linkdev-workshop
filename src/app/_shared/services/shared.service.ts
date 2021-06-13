@@ -8,13 +8,9 @@ import { Article, News } from "../models/news";
 })
 
 export class SharedService {
-    private categoryIdSource = new BehaviorSubject<number>(3);
-    currentCat_id = this.categoryIdSource.asObservable();
+    articaleObject = new BehaviorSubject<any>("Subject triggered");
+    articaleSubject = this.articaleObject.asObservable();
     constructor(private http: HttpClient) {}
-
-    changeCatId(id: number) {
-        this.categoryIdSource.next(id);
-    }
 
 
     getNews(){

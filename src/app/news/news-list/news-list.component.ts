@@ -11,8 +11,11 @@ import { SharedService } from 'src/app/_shared/services/shared.service';
 export class NewsListComponent implements OnInit {
 
   articles: Article[]
+  filteredAricals: Article[];
   categories: SourceCategory[]
-  constructor(private sharedService: SharedService, private router: Router) { }
+  binding: string;
+  constructor(private sharedService: SharedService, private router: Router) {
+  }
 
   ngOnInit(): void {
     this.getNewsList();
@@ -24,14 +27,38 @@ export class NewsListComponent implements OnInit {
 
   getNewsList(): void {
     this.sharedService.getNews().subscribe(res => {
+      res.articles.forEach((element: any) => {
+        element.category = res.sourceCategory.find(cate => {
+          return cate.id === element.sourceID
+        })
+      });
       this.articles = res.articles;
+      this.filteredAricals = this.articles;
       this.categories = res.sourceCategory;
-      console.log(this.articles);
     })
-
   }
 
-  onSelecteCategory(category): void {
+  onSelecteCategory(event): void {
+    this.filteredAricals = this.articles
+    let categoryId = event.target.value
+    console.log(categoryId);
+    this.filteredAricals = this.filteredAricals.filter( res => {
+      return res.sourceID == categoryId
+    })
+  }
 
+  searchByTitle() {
+    if (this.binding !== '') {
+      this.filteredAricals = this.articles.filter(articale => {
+        return articale.title.toLocaleLowerCase().indexOf(this.binding.toLocaleLowerCase()) !== -1;
+      })
+    } else {
+      this.filteredAricals = this.articles;
+    }
+  }
+
+  onArticaleClicked(articalObj) {
+    this.router.navigate(['/news-list/', articalObj.id])
+    this.sharedService.articaleObject.next(articalObj);
   }
 }

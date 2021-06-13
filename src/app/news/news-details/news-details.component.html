@@ -1,1 +1,74 @@
-<p>news-details works!</p>
+<div class="news-list-bg ">
+  <div class="container">
+    <nav aria-label=" breadcrumb">
+      <ol class="breadcrumb pt-4">
+        <li class="breadcrumb-item active"><a [routerLink]="['/home']" routerLinkActive="router-link-active">Home</a>
+        </li>
+        <li class="breadcrumb-item active"><a [routerLink]="['/news-list']"
+            routerLinkActive="router-link-active">News</a>
+        </li>
+        <li class="breadcrumb-item " aria-current="page"><span class="page">News Details</span></li>
+      </ol>
+    </nav>
+    <h1 class="header-title">News Details</h1>
+    <div class="container">
+      <div class="row">
+        <div class="card">
+          <img [src]="articalObject?.urlToImage" class="card-img-top img-fluid" alt="...">
+          <div class="card-body">
+            <div class="news-media d-flex justify-content-end">
+              <img src="assets/theme/images/ic_favorite_border_24px.png" alt="" srcset="">
+              <i class="fas fa-heart"></i>
+              <i class="fas fa-share-alt"></i>
+            </div>
+            <h5 class="card-title">{{articalObject?.title}}</h5>
+            <div class="news-tags"> {{articalObject?.category?.name}}</div>
+            <p class="card-text">{{articalObject?.description}}</p>
+            <p class="card-text">{{articalObject?.content}}</p>
+            <div class="news-date">
+              <img src="assets/theme/images/calender.png" class="news-calender" alt="" srcset="">
+              <p class="">{{articalObject?.publishedAt | date: 'EEEE d MMMM y'}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="related-container py-3">
+      <h1>Related Topics</h1>
+      <div class="row related-topics">
+        <div class="col-md-4">
+          <div class="card c-iot">
+            <div class="card-img-top" alt="Card image cap"></div>
+            <div class="card-body">
+              <h6 class="card-subtitle pb-2">Category</h6>
+              <h3 class="">New Artificial Intelligence Apps</h3>
+              <a href="#" class="btn-link">Go somewhere <img src="assets/theme/images/right-arrow.png" alt="" srcset=""></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card c-dev">
+            <div class="card-img-top" alt="Card image cap"></div>
+            <div class="card-body">
+              <h6 class="card-subtitle pb-2">Category</h6>
+              <h3 class="">New Artificial Intelligence Apps</h3>
+              <a href="#" class="btn-link">Go somewhere <img src="assets/theme/images/right-arrow.png" alt="" srcset=""></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card c-ai">
+            <div class="card-img-top" alt="Card image cap"></div>
+            <div class="card-body">
+              <h6 class="card-subtitle pb-2">Category</h6>
+              <h3 class="">New Artificial Intelligence Apps</h3>
+              <a href="#" class="btn-link">Go somewhere <img src="assets/theme/images/right-arrow.png" alt="" srcset=""></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>

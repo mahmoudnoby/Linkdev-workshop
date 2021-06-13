@@ -4,6 +4,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { NewsListComponent } from './news-list/news-list.component';
 import { NewsDetailsComponent } from './news-details/news-details.component';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 
 const routes = [
@@ -16,7 +17,8 @@ const routes = [
   declarations: [HomePageComponent, NewsListComponent, NewsDetailsComponent],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    FormsModule
   ]
 })
 export class NewsModule { }

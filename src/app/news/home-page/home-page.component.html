@@ -3,17 +3,24 @@
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
   </ol>
   <div class="carousel-inner">
+    <div class="layer"></div>
     <div class="carousel-item active">
-      <img src="assets/theme/images/banner.png" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h1>Al Foundation</h1>
+        <p>is focused on inspiring the next generation of  kids Healthcare professionals.</p>
+        <button class="btn btn-primary">Donate Now</button>
+      </div>
+      <img src="assets/theme/images/55 - Copy.PNG" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="assets/theme/images/Rectangle.png" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item ">
-      <img src="assets/theme/images/parallax-10.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h1>Al Foundation</h1>
+        <p>is focused on inspiring the next generation of  kids Healthcare professionals.</p>
+        <button class="btn btn-primary">Donate Now</button>
+      </div>
+      <img src="assets/theme/images/rectangle-finle.png" class="d-block w-100" alt="...">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -24,6 +31,7 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
+
 </div>
 
 <!--News Section-->
@@ -35,7 +43,7 @@
 
   <div class="row">
     <div *ngFor="let article of articles" class="col-md-4 col-sm-6 col-xs-12">
-      <div class="card" style="width: 23rem;" [routerLink]="['/news-list/', article.id]" routerLinkActive="router-link-active" >
+      <div class="card" style="width: 23rem;" (click)="onArticaleClicked(article)">
         <img [src]="article.urlToImage" class="card-img-top img-fluid" alt="...">
         <div class="card-body">
           <div class="news-media d-flex justify-content-end">
@@ -44,7 +52,7 @@
             <i class="fas fa-share-alt"></i>
           </div>
           <h5 class="card-title">{{article.title}}</h5>
-          <div class="news-tags"> News</div>
+          <div class="news-tags"> {{article?.category?.name}}</div>
           <p class="card-text">{{article.description}}</p>
           <div class="news-date">
             <img src="assets/theme/images/calender.png" class="news-calender" alt="" srcset="">

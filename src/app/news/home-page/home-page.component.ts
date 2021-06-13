@@ -22,9 +22,19 @@ export class HomePageComponent implements OnInit {
 
   getHomePageNews(): void {
     this.sharedService.getNews().subscribe(res => {
-      this.articles = res.articles.filter(article => article.showOnHomepage == true)
+      res.articles.forEach((element :any) => {
+        element.category = res.sourceCategory.find(cate => {
+          return cate.id === element.sourceID
+        })
+      });
+      this.articles = res.articles.filter(article => article.showOnHomepage == true);
       console.log(this.articles);
     })
+  }
+
+  onArticaleClicked(articalObj) {
+    this.router.navigate(['/news-list/', articalObj.id])
+    this.sharedService.articaleObject.next(articalObj);
   }
 
 }

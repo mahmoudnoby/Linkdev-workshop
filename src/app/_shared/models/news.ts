@@ -13,6 +13,7 @@
       urlToImage: string;
       publishedAt: Date;
       content: string;
+      category: SourceCategory
   }
 
   export interface News {

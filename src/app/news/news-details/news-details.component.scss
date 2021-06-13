@@ -1,0 +1,109 @@
+.news-list-bg {
+  background: #e9ecef !important;
+  .breadcrumb{
+    padding-left: 0 !important;
+    .breadcrumb-item{
+      a{
+        color: #8dc043;
+        font-size: 14px;
+      }
+      .page{
+        font-size: 14px;
+      }
+    }
+  }
+  .header-title{
+    padding-bottom: 0px;
+    padding-left: 0px;
+  }
+
+  .card {
+    box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+    margin-bottom: 30px;
+    cursor: pointer;
+    .card-img-top {
+      object-fit: cover;
+      max-height: 30rem;
+    }
+    .card-title {
+      font-size: 19px;
+    }
+    .card-text {
+      padding-top: 5px;
+      color: #787878;
+      margin-bottom: 20px;
+      overflow: hidden;
+      font-size: 14px;
+    }
+    .news-media {
+      padding-bottom: 15px;
+      img {
+        height: 19px;
+      }
+      .fa-share-alt,
+      .fa-heart {
+        padding-left: 9px;
+        color: #8dc043;
+        font-size: 19px;
+      }
+    }
+    .news-tags {
+      display: inline-block;
+      background-color: #e3e3e3;
+      padding: 2px 21px;
+      border-radius: 8px;
+      margin-bottom: 8px;
+    }
+    .news-date {
+      img {
+        height: 17px;
+        padding-right: 9px;
+      }
+      p {
+        font-weight: bold;
+        font-size: 14px;
+        color: #707070;
+        display: inline-block;
+      }
+    }
+  }
+
+  .related-topics {
+    .c-iot {
+      background-image: url('../../../assets/theme/images/tt.jpg');
+      background-position: center;
+      background-size: cover;
+    }
+    .c-dev {
+      background-image: url('../../../assets/theme/images/AI.png');
+      background-position: center;
+      background-size: cover;
+    }
+    .c-ai {
+      background-image: url('../../../assets/theme/images/IOT.png');
+      background-position: center;
+      background-size: cover;
+    }
+    .card {
+      .card-img-top{
+        height: 12rem;
+      }
+      .card-body{
+        margin: 7px;
+        background-color: #ffffffd9;
+        border-radius: 5px;
+        .btn-link{
+          color: #8dc043;
+          text-decoration: none;
+          img{
+            transition: 0.2s ease-in-out;
+            transform-origin: left top;
+            &:hover{
+              transform: scalex(1.5);
+            }
+          }
+        }
+      }
+    }
+  }
+}
